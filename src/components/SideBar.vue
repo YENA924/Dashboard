@@ -2,6 +2,8 @@
   <v-list
     density="compact"
     bg-color="#65C18C"
+    class="color--white"
+    elevation="2"
   >
     <v-list-item
       :prepend-avatar="require('@/assets/avatar.png')"
@@ -33,3 +35,7 @@ export default {
   name: 'SideBar'
 }
 </script>
+
+<style scoped>
+  .color--white { color: #ffffff !important }
+</style>

@@ -1,6 +1,8 @@
 <template>
   <v-toolbar
     color="#65C18C"
+    class="color--white"
+    elevation="2"
   >
     <v-toolbar-title>Dashboard</v-toolbar-title>
 
@@ -68,6 +70,7 @@ export default {
 </script>
 
 <style>
+  .color--white { color: #ffffff !important }
   .ev-text-field.clearable .ev-input {
     border-width: 0 0 2px;
     border-radius: 0;

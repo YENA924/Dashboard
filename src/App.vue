@@ -4,7 +4,7 @@
       app
       :image="require('@/assets/bg-navigation-menu.png')"
     >
-      <side-bar />
+      <side-bar></side-bar>
     </v-navigation-drawer>
     <v-main>
       <!-- Provides the application the proper gutter -->
@@ -12,23 +12,23 @@
         <!-- If using vue-router -->
         <!-- <router-view></router-view>
       </v-container> -->
-      <tool-bar />
-      <MainContents />
+      <tool-bar></tool-bar>
+      <main-contents></main-contents>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import MainContents from '@/components/MainContents'
 import SideBar from '@/components/SideBar'
 import ToolBar from '@/components/ToolBar'
+import MainContents from '@/components/MainContents'
 
 export default {
   name: 'App',
   components: {
-    MainContents,
     SideBar,
-    ToolBar
+    ToolBar,
+    MainContents
   }
 }
 </script>
