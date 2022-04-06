@@ -2,7 +2,6 @@
   <v-list
     density="compact"
     bg-color="#65C18C"
-    color="#fff"
   >
     <v-list-item
       :prepend-avatar="require('@/assets/avatar.png')"
@@ -15,7 +14,6 @@
     nav
     bg-color="transparent"
     active-color="#65C18C"
-    color="#fff"
   >
     <v-list-item
       prepend-icon="mdi-view-dashboard"

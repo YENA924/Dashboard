@@ -6,24 +6,31 @@
 
     <v-spacer></v-spacer>
 
-    <ev-text-field
-      v-model="searchText"
-      id="toolbar__search"
-      placehoder="Search..."
-      type="text"
-      clearable
+    <v-menu
+      activator="#toolbar__search"
+      :close-on-content-click="true"
     >
-    </ev-text-field>
-    <v-menu activator="#toolbar__search">
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in searchItems"
-          :key="index"
-          :value="index"
+      <template v-slot:activator>
+        <ev-text-field
+          v-model="searchText"
+          id="toolbar__search"
+          placehoder="Search..."
+          type="text"
+          clearable
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
+        </ev-text-field>
+      </template>
+      <v-card max-height="200">
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in searchItems"
+            :key="index"
+            :value="index"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card>
     </v-menu>
     <v-btn icon>
       <v-icon>mdi-view-dashboard</v-icon>
@@ -40,12 +47,16 @@ import { ref } from '@vue/reactivity'
 export default {
   name: 'ToolBar',
   setup () {
-    const searchText = ref('')
+    const searchText = ref()
     const searchItems = [
-      { title: 'Click Me' },
-      { title: 'Click Me' },
-      { title: 'Click Me' },
-      { title: 'Click Me 2' }
+      { id: 0, title: '치킨' },
+      { id: 1, title: '떡볶이' },
+      { id: 2, title: '햄버거' },
+      { id: 3, title: '피자' },
+      { id: 3, title: '갈비탕' },
+      { id: 3, title: '육개장' },
+      { id: 3, title: '파스타' },
+      { id: 3, title: '김밥' }
     ]
 
     return {
