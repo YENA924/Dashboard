@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <side-bar />
+    <v-navigation-drawer
+      app
+      :image="require('@/assets/bg-navigation-menu.png')"
+    >
+      <side-bar />
+    </v-navigation-drawer>
     <v-main>
       <!-- Provides the application the proper gutter -->
       <!-- <v-container fluid> -->
@@ -14,9 +19,9 @@
 </template>
 
 <script>
-import MainContents from '@/components/MainContents.vue'
-import SideBar from '@/components/SideBar.vue'
-import ToolBar from '@/components/ToolBar.vue'
+import MainContents from '@/components/MainContents'
+import SideBar from '@/components/SideBar'
+import ToolBar from '@/components/ToolBar'
 
 export default {
   name: 'App',
@@ -27,3 +32,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .v-navigation-drawer__img img {
+    opacity: 0.25;
+  }
+</style>

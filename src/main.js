@@ -7,6 +7,6 @@ import EVUI from 'evui'
 loadFonts()
 
 createApp(App)
-  .use(vuetify)
   .use(EVUI)
+  .use(vuetify)
   .mount('#app')
