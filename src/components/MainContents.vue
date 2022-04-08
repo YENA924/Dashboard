@@ -1,13 +1,10 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row>
-      <dash-board-chart></dash-board-chart>
-      <dash-board-chart></dash-board-chart>
-      <dash-board-chart></dash-board-chart>
+      <dash-board-chart
+        :chartJsonData="chartJsonData"
+      ></dash-board-chart>
       
-      <dash-board-icon></dash-board-icon>
-      <dash-board-icon></dash-board-icon>
-      <dash-board-icon></dash-board-icon>
       <dash-board-icon></dash-board-icon>
 
       <dash-board-grid></dash-board-grid>
@@ -20,6 +17,7 @@
 </template>
 
 <script>
+import chart from '../data/chartJsonData.json'
 import DashBoardChart from './views/dashboard/DashBoardChart'
 import DashBoardIcon from './views/dashboard/DashBoardIcon'
 import DashBoardGrid from './views/dashboard/DashBoardGrid'
@@ -31,7 +29,14 @@ import DashBoardTabGrid from './views/dashboard/DashBoardTabGrid'
 export default {
   name: 'MainContents',
   // components: { EditUserInfo, UserInfo, VChart },
-  components: { DashBoardChart, DashBoardIcon, DashBoardGrid, DashBoardTabGrid }
+  components: { DashBoardChart, DashBoardIcon, DashBoardGrid, DashBoardTabGrid },
+  setup () {
+    const chartJsonData = chart
+
+    return {
+      chartJsonData
+    }
+  }
 }
 </script>
 
