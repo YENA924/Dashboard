@@ -2,14 +2,16 @@
   <v-container>
     <v-row>
       <dash-board-chart
-        :chartJsonData="chartJsonData"
+        :chartData="chartJsonData"
       ></dash-board-chart>
       
       <dash-board-icon
-        :iconJsonData="iconJsonData"
+        :iconData="iconJsonData"
       ></dash-board-icon>
 
-      <dash-board-grid></dash-board-grid>
+      <dash-board-grid
+        :gridData="gridJsonData"
+      ></dash-board-grid>
 
       <dash-board-tab-grid></dash-board-tab-grid>
       <!-- <edit-user-info></edit-user-info>
@@ -21,6 +23,7 @@
 <script>
 import chart from '../data/chartJsonData.json'
 import icon from '../data/iconJsonData.json'
+import grid from '../data/gridJsonData.json'
 
 import DashBoardChart from './views/dashboard/DashBoardChart'
 import DashBoardIcon from './views/dashboard/DashBoardIcon'
@@ -37,10 +40,12 @@ export default {
   setup () {
     const chartJsonData = chart
     const iconJsonData = icon
+    const gridJsonData = grid
 
     return {
       chartJsonData,
-      iconJsonData
+      iconJsonData,
+      gridJsonData
     }
   }
 }

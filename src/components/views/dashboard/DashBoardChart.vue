@@ -1,19 +1,19 @@
 <template>
   <v-col
-    v-for="(chartData, index) in chartJsonData"
+    v-for="(chart, index) in chartData"
     :key="index"
     cols="12"
     md="4"
   >
     <v-card>
-      <v-card-title>{{ chartData.title }}</v-card-title>
-      <v-card-subtitle>{{ chartData.subTitle }}</v-card-subtitle>
+      <v-card-title>{{ chart.title }}</v-card-title>
+      <v-card-subtitle>{{ chart.subTitle }}</v-card-subtitle>
       <v-card-text>
         <v-row>
           <v-col cols="12">
             <ev-chart
-              :data="chartData.data"
-              :options="chartData.options"
+              :data="chart.data"
+              :options="chart.options"
             />
           </v-col>
         </v-row>
@@ -27,7 +27,7 @@
 export default {
   name: 'DashBoardChart',
   props: {
-    chartJsonData: {
+    chartData: {
       type: Array,
       required: true
     }

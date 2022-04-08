@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-for="(iconData, index) in iconJsonData"
+    v-for="(icon, index) in iconData"
     :key="index"
     cols="12"
     md="3"
@@ -13,12 +13,10 @@
           <ev-icon icon="ev-icon-user" />
         </v-list-item-avatar>
         <v-list-item-title class="text-h5">
-          {{ iconData.title }}
+          {{ icon.title }}
         </v-list-item-title>
         <v-list-item-content>
-          <div class="mb-4">
-          {{ iconData.contents }}
-          </div>
+          {{ icon.contents }}
         </v-list-item-content>
       </v-list-item>
     </v-card>
@@ -30,7 +28,7 @@
 export default {
   name: 'DashBoardIcon',
   props: {
-    iconJsonData: {
+    iconData: {
       type: Array,
       required: true
     }
