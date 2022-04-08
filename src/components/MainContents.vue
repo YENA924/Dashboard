@@ -5,7 +5,9 @@
         :chartJsonData="chartJsonData"
       ></dash-board-chart>
       
-      <dash-board-icon></dash-board-icon>
+      <dash-board-icon
+        :iconJsonData="iconJsonData"
+      ></dash-board-icon>
 
       <dash-board-grid></dash-board-grid>
 
@@ -18,6 +20,7 @@
 
 <script>
 import chart from '../data/chartJsonData.json'
+import icon from '../data/iconJsonData.json'
 
 import DashBoardChart from './views/dashboard/DashBoardChart'
 import DashBoardIcon from './views/dashboard/DashBoardIcon'
@@ -33,9 +36,11 @@ export default {
   components: { DashBoardChart, DashBoardIcon, DashBoardGrid, DashBoardTabGrid },
   setup () {
     const chartJsonData = chart
+    const iconJsonData = icon
 
     return {
-      chartJsonData
+      chartJsonData,
+      iconJsonData
     }
   }
 }

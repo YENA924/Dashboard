@@ -1,24 +1,26 @@
 <template>
-  <v-col cols="12" md="3">
+  <v-col
+    v-for="(iconData, index) in iconJsonData"
+    :key="index"
+    cols="12"
+    md="3"
+  >
     <v-card
       class="mx-auto"
     >
-      <v-list-item three-line>
-        <v-list-item-content>
-          <div class="text-overline mb-4">
-            OVERLINE
-          </div>
-          <v-list-item-title class="text-h5 mb-1">
-            Headline 5
-          </v-list-item-title>
-          <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
-        </v-list-item-content>
-
+      <v-list-item>
         <v-list-item-avatar>
           <ev-icon icon="ev-icon-user" />
         </v-list-item-avatar>
+        <v-list-item-title class="text-h5">
+          {{ iconData.title }}
+        </v-list-item-title>
+        <v-list-item-content>
+          <div class="mb-4">
+          {{ iconData.contents }}
+          </div>
+        </v-list-item-content>
       </v-list-item>
-
     </v-card>
   </v-col>
 </template>
@@ -26,6 +28,12 @@
 <script>
 
 export default {
-  name: 'DashBoardIcon'
+  name: 'DashBoardIcon',
+  props: {
+    iconJsonData: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
