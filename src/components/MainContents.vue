@@ -18,6 +18,7 @@
 
 <script>
 import chart from '../data/chartJsonData.json'
+
 import DashBoardChart from './views/dashboard/DashBoardChart'
 import DashBoardIcon from './views/dashboard/DashBoardIcon'
 import DashBoardGrid from './views/dashboard/DashBoardGrid'
