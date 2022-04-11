@@ -7,13 +7,8 @@
       <side-bar></side-bar>
     </v-navigation-drawer>
     <v-main>
-      <!-- Provides the application the proper gutter -->
-      <!-- <v-container fluid> -->
-        <!-- If using vue-router -->
-        <!-- <router-view></router-view>
-      </v-container> -->
       <tool-bar></tool-bar>
-      <main-contents></main-contents>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
@@ -21,14 +16,12 @@
 <script>
 import SideBar from '@/components/SideBar'
 import ToolBar from '@/components/ToolBar'
-import MainContents from '@/components/MainContents'
 
 export default {
   name: 'App',
   components: {
     SideBar,
-    ToolBar,
-    MainContents
+    ToolBar
   }
 }
 </script>

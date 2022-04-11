@@ -8,6 +8,7 @@
     <v-list-item
       :prepend-avatar="require('@/assets/avatar.png')"
       title="Vue Dashboard"
+      to="/"
     >
     </v-list-item>
   </v-list>
@@ -21,12 +22,16 @@
       prepend-icon="mdi-view-dashboard"
       title="Dashboard"
       value="dashboard"
-    ></v-list-item>
+      :to="'/dashboard'"
+    >
+    </v-list-item>
     <v-list-item
       prepend-icon="mdi-account"
       title="User Profile"
       value="userProfile"
-    ></v-list-item>
+      :to="'/userProfile'"
+    >
+    </v-list-item>
   </v-list>
 </template>
 

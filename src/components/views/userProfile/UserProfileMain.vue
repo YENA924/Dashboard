@@ -1,22 +1,19 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row>
-      <dash-board-chart></dash-board-chart>
-      <dash-board-icon></dash-board-icon>
-      <dash-board-grid></dash-board-grid>
-      <dash-board-tab-grid></dash-board-tab-grid>
-      <!-- <edit-user-info></edit-user-info>
-      <user-info></user-info> -->
+      <edit-user-info></edit-user-info>
+      <user-info></user-info>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import EditUserInfo from './EditUserInfo'
+import UserInfo from './UserInfo'
 
 export default {
-  name: 'MainContents',
-  // components: { EditUserInfo, UserInfo, VChart },
-  components: { DashBoardChart, DashBoardIcon, DashBoardGrid, DashBoardTabGrid }
+  name: 'DashboardMain',
+  components: { EditUserInfo, UserInfo }
 }
 </script>
 

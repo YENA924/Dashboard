@@ -4,7 +4,7 @@
     class="color--white"
     elevation="2"
   >
-    <v-toolbar-title>Dashboard</v-toolbar-title>
+    <v-toolbar-title>{{ $route.name }}</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
