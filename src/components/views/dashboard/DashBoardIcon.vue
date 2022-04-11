@@ -7,30 +7,33 @@
   >
     <v-card
       class="mx-auto"
+      tile
     >
-      <v-list-item>
-        <v-list-item-avatar>
+      <v-list-item three-line>
+        <v-list-item-avatar start>
           <ev-icon icon="ev-icon-user" />
         </v-list-item-avatar>
-        <v-list-item-title class="text-h5">
+        <v-list-item-title>
           {{ icon.title }}
         </v-list-item-title>
-        <v-list-item-content>
+        <v-list-item-subtitle>
           {{ icon.contents }}
-        </v-list-item-content>
+        </v-list-item-subtitle>
       </v-list-item>
     </v-card>
   </v-col>
 </template>
 
 <script>
+import iconJsonData from '@/data/iconJsonData.json'
 
 export default {
   name: 'DashBoardIcon',
-  props: {
-    iconData: {
-      type: Array,
-      required: true
+  setup () {
+    const iconData = iconJsonData
+
+    return {
+      iconData
     }
   }
 }

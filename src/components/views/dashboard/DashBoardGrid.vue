@@ -27,21 +27,18 @@
 </template>
 
 <script>
+import gridJsonData from '@/data/gridJsonData.json'
 import { ref } from 'vue';
 
 export default {
   name: 'DashBoardGrid',
-  props: {
-    gridData: {
-      type: Array,
-      required: true
-    }
-  },
   setup () {
-    const selected = ref([]);
+    const gridData = gridJsonData
+    const selected = ref([])
     const checked = ref([])
 
     return {
+      gridData,
       selected,
       checked
     }

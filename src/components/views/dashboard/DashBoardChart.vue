@@ -23,16 +23,12 @@
 </template>
 
 <script>
+import chartJsonData from '@/data/chartJsonData.json'
 
 export default {
   name: 'DashBoardChart',
-  props: {
-    chartData: {
-      type: Array,
-      required: true
-    }
-  },
   setup () {
+    const chartData = chartJsonData
     const data = {
       series: {
         series1: { name: 'series#1' },
@@ -57,6 +53,7 @@ export default {
     }
 
     return {
+      chartData,
       data,
       options
     }

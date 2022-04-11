@@ -1,0 +1,52 @@
+{
+  "title":"Tasks",
+  "tabItems":[
+    {
+        "icon":"ev-icon-alert3",
+        "title":"BUGS"
+    },
+    {
+        "icon":"ev-icon-window",
+        "title":"WEBSITE"
+    },
+    {
+        "icon":"ev-icon-server",
+        "title":"SERVER"
+    }
+  ],
+  "tabContents": {
+    "tableData":[
+        
+    ],
+    "columns":[
+        {
+          "caption":"",
+          "field":"check",
+          "type":"boolean"
+        },
+        {
+          "caption":"",
+          "field":"task",
+          "type":"string"
+        },
+        {
+          "caption":"",
+          "field":"gridButton",
+          "type":"boolean"
+        }
+    ],
+    "widthMV":"100%",
+    "heightMV":300,
+    "option": {
+      "adjustMV":true,
+      "showHeaderMV":false,
+      "rowHeightMV":35,
+      "columnWidthMV":80,
+      "checkOption":{
+          "use":true,
+          "mode":"multi",
+          "headerCheckMV":false
+      }
+    }
+  }
+}
