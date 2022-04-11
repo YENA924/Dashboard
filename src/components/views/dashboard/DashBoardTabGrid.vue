@@ -68,7 +68,6 @@ export default {
 
     const onClickTab = (tab) => {
       selectedTab = tab
-      console.log(tab,selectedTab)
     }
 
     return {
