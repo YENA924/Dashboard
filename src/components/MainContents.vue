@@ -12,13 +12,6 @@
 </template>
 
 <script>
-import DashBoardChart from './views/dashboard/DashBoardChart'
-import DashBoardIcon from './views/dashboard/DashBoardIcon'
-import DashBoardGrid from './views/dashboard/DashBoardGrid'
-import DashBoardTabGrid from './views/dashboard/DashBoardTabGrid'
-// import EditUserInfo from './views/userProfile/EditUserInfo'
-// import UserInfo from './views/userProfile/UserInfo'
-
 
 export default {
   name: 'MainContents',
