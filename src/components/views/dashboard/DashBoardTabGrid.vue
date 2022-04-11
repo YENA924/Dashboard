@@ -2,15 +2,21 @@
   <v-col cols="12" md="6">
     <v-card>
       <v-card-title>{{ tabGrid.title }}</v-card-title>
-      <v-card-subtitle
-        class="justify-md-space-between"
-      >
-        <ev-button
-          v-for="(tab, index) in tabGrid.tabItems"
-          :key="index"
-        >
-           <i :class="tab.icon"/>{{ tab.title }}
-        </ev-button>
+      <v-card-subtitle>
+        <ev-button-group>
+          <ev-button
+            v-for="(tab, index) in tabGrid.tabItems"
+            v-bind="selectedTab"
+            v-model="selectedTab"
+            :key="index"
+            :auto-focus="true"
+            :type="selectedTab === tab ? 'primary' : 'ghost'"
+            size="large"
+            @click="onClickTab(tab)"
+          >
+            <i :class="tab.icon"/> {{ tab.title }}
+          </ev-button>
+        </ev-button-group>
       </v-card-subtitle>
       <v-card-text>
         <v-row>
@@ -18,18 +24,25 @@
             <ev-grid
               v-model:selected="selected"
               v-model:checked="checked"
-              :columns="tabContents.columns"
-              :rows="tabContents.tableData"
-              :width="tabContents.widthMV"
-              :height="tabContents.heightMV"
-              :option="tabContents.option"
-            >
-              <template #inputNumber="{ item }">
-                <ev-input-number
-                  v-model="item.row[2][item.column.index]"
-                  :max="100"
-                  :min="0"
-                />
+              :columns="tabGridProps.columns"
+              :rows="tabContents.BUGS"
+              :width="tabGridProps.widthMV"
+              :height="tabGridProps.heightMV"
+              :option="tabGridProps.option"
+            >    
+              <template #gridButton>
+                <ev-button
+                  type="text"
+                  size="small"
+                >
+                  <ev-icon icon="ev-icon-edit" />
+                </ev-button>
+                <ev-button
+                  type="text"
+                  size="small"
+                >
+                  <ev-icon icon="ev-icon-close2" />
+                </ev-button>
               </template>
             </ev-grid>
           </v-col>
@@ -48,14 +61,24 @@ export default {
   setup () {
     const tabGrid = tabGridJsonData
     const tabContents = tabGridJsonData.tabContents
+    const tabGridProps = tabGridJsonData.props
     const selected = ref([])
     const checked = ref([])
+    let selectedTab = ref(tabGridJsonData.tabItems[0])
+
+    const onClickTab = (tab) => {
+      selectedTab = tab
+      console.log(tab,selectedTab)
+    }
 
     return {
+      selectedTab,
       tabGrid,
       tabContents,
+      tabGridProps,
       selected,
-      checked
+      checked,
+      onClickTab
     }
   }
 }

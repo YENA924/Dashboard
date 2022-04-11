@@ -1,42 +1,71 @@
 [
-    {
-       "title":"Employees Stats",
-       "subTitle":"New employees on 15th September, 2021",
-       "data":{
-          "tableData":[],
-          "widthMV":"100%",
-          "heightMV":300,
-          "columns":[
-             {
-                "caption":"Name",
-                "field":"userName",
-                "type":"string",
-                "width":80
-             },
-             {
-                "caption":"Role",
-                "field":"role",
-                "type":"string",
-                "width":100
-             },
-             {
-                "caption":"Phone",
-                "field":"phone",
-                "type":"string",
-                "sortable":false
-             },
-             {
-                "caption":"Email",
-                "field":"email",
-                "type":"string",
-                "width":200
-             },
-             {
-                "caption":"Last Login",
-                "field":"lastLogin",
-                "type":"string"
-             }
-          ]
-       }
-    }
+   {
+      "title":"Employees Stats",
+      "subTitle":"New employees on 11th April, 2022",
+      "props":{
+         "tableData":[
+            [
+               "1",
+               "Dakota Rice",
+               "$36,738",
+               "Niger",
+               "Oud-Turnhout"
+            ],
+            [
+               "2",
+               "Minerva Hooper",
+               "$23,738",
+               "Curaçao",
+               "Sinaai-Waas"
+            ],
+            [
+               "3",
+               "Sage Rodriguez",
+               "$56,142",
+               "Netherlands",
+               "Overland Park"
+            ],
+            [
+               "4",
+               "Philip Chaney",
+               "$38,735",
+               "Korea, South",
+               "Gloucester"
+            ]
+         ],
+         "columns":[
+            {
+               "caption":"ID",
+               "field":"id",
+               "type":"string"
+            },
+            {
+               "caption":"Name",
+               "field":"name",
+               "type":"string"
+            },
+            {
+               "caption":"Salary",
+               "field":"salary",
+               "type":"string"
+            },
+            {
+               "caption":"Country",
+               "field":"country",
+               "type":"string"
+            },
+            {
+               "caption":"City",
+               "field":"city",
+               "type":"string"
+            }
+         ],
+         "widthMV":"100%",
+         "heightMV":300,
+         "option": {
+            "adjust": true,
+            "useFilter": false
+         }
+      }
+   }
 ]

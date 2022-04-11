@@ -2,21 +2,21 @@
     {
        "title":"Revenue",
        "contents":"$34,245",
-       "icon":""
+       "thumbnail":"ev-icon-getmore"
     },
     {
        "title":"Used Space",
        "contents":"49/50 GB",
-       "icon":""
+       "thumbnail":"ev-icon-document"
     },
     {
        "title":"Fixed Issues",
        "contents":"75",
-       "icon":""
+       "thumbnail":"ev-icon-info"
     },
     {
        "title":"Folowers",
        "contents":"+245",
-       "icon":""
+       "thumbnail":"ev-icon-bell"
     }
  ]

@@ -14,10 +14,11 @@
             <ev-grid
               v-model:selected="selected"
               v-model:checked="checked"
-              :columns="grid.columns"
-              :rows="grid.tableData"
-              :width="grid.widthMV"
-              :height="grid.heightMV"
+              :columns="grid.props.columns"
+              :rows="grid.props.tableData"
+              :width="grid.props.widthMV"
+              :height="grid.props.heightMV"
+              :option="grid.props.option"
             ></ev-grid>
           </v-col>
         </v-row>

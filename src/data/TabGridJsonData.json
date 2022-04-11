@@ -1,51 +1,91 @@
 {
   "title":"Tasks",
   "tabItems":[
-    {
+     {
         "icon":"ev-icon-alert3",
         "title":"BUGS"
-    },
-    {
+     },
+     {
         "icon":"ev-icon-window",
         "title":"WEBSITE"
-    },
-    {
+     },
+     {
         "icon":"ev-icon-server",
         "title":"SERVER"
-    }
+     }
   ],
   "tabContents": {
-    "tableData":[
-        
+    "BUGS": [
+      [
+        "Sign contract for \"What are conference organizers afraid of?",
+        ""
+      ],
+      [
+        "Lines From Great Russian Literature? Or E-mails From My Boss?",
+        ""
+      ],
+      [
+        "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
+        ""
+      ] 
     ],
+    "WEBSITE": [
+      [
+        "Sign contract for \"What are conference organizers afraid of?",
+        ""
+      ],
+      [
+        "Lines From Great Russian Literature? Or E-mails From My Boss?",
+        ""
+      ],
+      [
+        "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
+        ""
+      ] 
+    ],
+    "SERVER": [
+      [
+        "Sign contract for \"What are conference organizers afraid of?",
+        ""
+      ],
+      [
+        "Lines From Great Russian Literature? Or E-mails From My Boss?",
+        ""
+      ],
+      [
+        "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
+        ""
+      ] 
+    ]
+  },
+  "props": {
     "columns":[
-        {
-          "caption":"",
-          "field":"check",
-          "type":"boolean"
-        },
-        {
-          "caption":"",
-          "field":"task",
-          "type":"string"
-        },
-        {
-          "caption":"",
-          "field":"gridButton",
-          "type":"boolean"
-        }
+      {
+        "caption":"",
+        "field":"task",
+        "type":"string",
+        "width": 600
+      },
+      {
+        "caption":"",
+        "field":"gridButton",
+        "type":"boolean"
+      }
     ],
     "widthMV":"100%",
     "heightMV":300,
-    "option": {
-      "adjustMV":true,
-      "showHeaderMV":false,
-      "rowHeightMV":35,
-      "columnWidthMV":80,
-      "checkOption":{
-          "use":true,
-          "mode":"multi",
-          "headerCheckMV":false
+    "option":{
+      "adjust":true,
+      "showHeader":false,
+      "rowHeight":35,
+      "columnWidth":80,
+      "useCheckbox": {
+        "use":true,
+        "mode":"multi",
+        "headerCheckMV":true
+      },
+      "style": {
+        "border": "none"
       }
     }
   }

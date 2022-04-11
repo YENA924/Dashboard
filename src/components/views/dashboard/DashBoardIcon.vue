@@ -9,16 +9,16 @@
       class="mx-auto"
       tile
     >
-      <v-list-item three-line>
-        <v-list-item-avatar start>
-          <ev-icon icon="ev-icon-user" />
-        </v-list-item-avatar>
-        <v-list-item-title>
-          {{ icon.title }}
-        </v-list-item-title>
-        <v-list-item-subtitle>
-          {{ icon.contents }}
-        </v-list-item-subtitle>
+      <v-list-item>
+        <v-list-item-header>
+          <v-list-item-title>
+            <v-list-item-avatar start>
+              <ev-icon :icon="icon.thumbnail" size="large" />
+            </v-list-item-avatar>
+            {{ icon.title }}
+          </v-list-item-title>
+          <v-list-item-subtitle class="d-flex justify-end text-h5">{{ icon.contents }}</v-list-item-subtitle>
+        </v-list-item-header>
       </v-list-item>
     </v-card>
   </v-col>
