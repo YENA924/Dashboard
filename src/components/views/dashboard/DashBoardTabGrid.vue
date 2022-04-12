@@ -10,7 +10,7 @@
             v-model="selectedTab"
             :key="index"
             :auto-focus="true"
-            :type="selectedTab === tab ? 'primary' : 'ghost'"
+            :type="selectedTab.title === tab.title ? 'primary' : 'ghost'"
             size="large"
             @click="onClickTab(tab)"
           >
@@ -25,7 +25,7 @@
               v-model:selected="selected"
               v-model:checked="checked"
               :columns="tabGridProps.columns"
-              :rows="tabContents.BUGS"
+              :rows="tabContents[selectedTab.title]"
               :width="tabGridProps.widthMV"
               :height="tabGridProps.heightMV"
               :option="tabGridProps.option"
@@ -67,7 +67,7 @@ export default {
     let selectedTab = ref(tabGridJsonData.tabItems[0])
 
     const onClickTab = (tab) => {
-      selectedTab = tab
+      selectedTab.value = tab
     }
 
     return {
